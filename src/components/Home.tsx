@@ -115,7 +115,7 @@ export const QuizComponent: React.FC<HomeStackNavProps<'Quiz'>> = ({
   );
 };
 
-export const Home: React.FC<HomeStackNavProps<'Home'>> = ({navigation}) => {
+export const HomeComponent: React.FC<HomeStackNavProps<'Home'>> = ({navigation}) => {
   const [trueFalseQuiz, setTrueFalseQuiz] = useState<Quiz>();
   useEffect(() => {
     Axios.get(
@@ -157,11 +157,11 @@ const Stack = createStackNavigator();
 
 interface HomeStackProps {}
 
-export const Main: React.FC<HomeStackProps> = ({}) => {
+export const Home: React.FC<HomeStackProps> = ({}) => {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName={'Home'}>
-        <Stack.Screen name={'Home'} component={Home} />
+        <Stack.Screen name={'Home'} component={HomeComponent} />
         <Stack.Screen name={'Quiz'} component={QuizComponent} />
       </Stack.Navigator>
     </NavigationContainer>

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Option, Question, Quiz, Answers, Breakdown} from './src/classes';
-import { Main } from './src/components/Main';
+import { Home } from './src/components/Home';
 import {which_character_are_you_sample} from './src/data/samples';
 type Props = {};
 export default ({}: Props) => {
@@ -82,6 +82,6 @@ export default ({}: Props) => {
     //   </TouchableOpacity>
     //   <Text>{outcome}</Text>
     // </View>
-    <Main/>
+    <Home/>
   );
 };
