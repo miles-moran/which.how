@@ -5,10 +5,7 @@ import { Dispatch, SetStateAction } from 'react';
 
 export type HomeParamList = {
   Home: undefined;
-  Quiz: {
-    quiz: Quiz;
-    index?: number;
-  };
+  Quiz: undefined;
 };
 
 export type HomeStackNavProps<T extends keyof HomeParamList> = {

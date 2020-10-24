@@ -5,6 +5,9 @@ import {Quiz, Question} from '../classes';
 export default (res:any) => {
       const transformed: Quiz = {
         title: 'Sample Quiz from opentbd.com!',
+        header: 'Welcome to the Trivia Challenge?',
+        subheader: "You will be presented with 10 True or False questions",
+        footer: "Can you score a 100 percent?",
         outcomes: {
           pass: {
             description: "You've passed",

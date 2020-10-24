@@ -2,6 +2,9 @@ import {Quiz} from '../classes';
 
 export const which_character_are_you_sample: Quiz = {
   title: 'Which disney princess are you?',
+  header: 'Which disney princess are you?',
+  subheader: "You will be presented with 10 multiple choice questions.",
+  footer: "Go!",
   outcomes: {
     'The Little Mermaid': {
       description: 'You are the little mermaid',
@@ -49,6 +52,9 @@ export const which_character_are_you_sample: Quiz = {
 
 export const multiple_choice_quiz_sample: Quiz = {
   title: 'Which disney princess are you?',
+  header: 'Which disney princess are you?',
+  subheader: "You will be presented with 10 multiple choice questions.",
+  footer: "Go!",
   outcomes: {
     'The Little Mermaid': {
       description: 'You are the little mermaid',

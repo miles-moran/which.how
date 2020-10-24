@@ -20,16 +20,12 @@ export type Answers = {
   question: Question
 }[]
 
-export type Breakdown = {[key: string]: number}
-
-export type Submission = {
-  answers: Answers[],
-  breakdown: Breakdown
-}
-
 export type Quiz = {
   title: string; //Which disney princess are you?
   outcomes: {[key: string]: Outcome};
   questions: Question[];
 };
 
+export type Results = {
+  outcomes:  {[key: string]: string}
+}
