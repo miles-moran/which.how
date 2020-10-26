@@ -9,12 +9,14 @@ interface Props {
   color?: string;
   backgroundColor?: string;
   press?: () => void;
-  style?: {}
+  style?: {},
+  disabled?: boolean
 }
 
-export default ({text, press, backgroundColor = primary, style={}}: Props) => {
+export default ({text, press, backgroundColor = primary, style={}, disabled=false}: Props) => {
     return (
     <TouchableOpacity
+    disabled={disabled}
       style={[{
         width: 50,
         height: 50,

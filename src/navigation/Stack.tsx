@@ -1,10 +1,10 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import { ResultsComponent } from "./ResultsComponent";
-import { HomeComponent} from "./HomeComponent";
-import { QuizProvider } from "./QuizProvider";
-import { StartComponent} from './StartComponent';
-import { QuestionComponent} from "./QuestionComponent";
+import { ResultsComponent } from "../components/results";
+import { HomeComponent} from "../components/home";
+import { QuizProvider } from "../providers/Provider";
+import { StartComponent} from '../components/start';
+import { QuestionComponent} from "../components/question";
 import React from 'react';
 
 

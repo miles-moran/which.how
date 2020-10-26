@@ -1,11 +1,11 @@
 import React from 'react';
 import {ScrollView, View} from 'react-native';
-import {HomeStackNavProps} from './HomeParams';
-import {Button} from './common';
-import {Poll} from './results/Poll';
-import {Quiz} from './results/Quiz';
-import {Weighted} from './results/Weighted';
-import generateResults from '../data/generateResults';
+import {HomeStackNavProps} from '../../navigation/Params';
+import {Button} from '../common';
+import {Poll} from './Poll';
+import {Quiz} from './Quiz';
+import {Weighted} from './Weighted';
+import generateResults from '../../data/generateResults';
 export const ResultsComponent: React.FC<HomeStackNavProps<'Results'>> = ({
   navigation,
   route,
@@ -20,7 +20,7 @@ export const ResultsComponent: React.FC<HomeStackNavProps<'Results'>> = ({
       case 'weighted':
         return <Weighted result={result} />;
       default:
-        return <Poll />;
+        return <Poll result={result} />;
     }
   };
   return (

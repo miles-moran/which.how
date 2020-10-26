@@ -1,8 +1,8 @@
 import React, {useContext} from 'react';
 import {Text, View, StyleSheet} from 'react-native';
-import {HomeStackNavProps} from './HomeParams';
-import {Button, Center} from './common';
-import {QuizContext} from './QuizProvider';
+import {HomeStackNavProps} from '../../navigation/Params';
+import {Button, Center} from '../common';
+import {QuizContext} from '../../providers/Provider';
 
 export const StartComponent: React.FC<HomeStackNavProps<'Start'>> = ({
   navigation,

@@ -6,7 +6,6 @@ interface QuizProps {
   result: Result;
 }
 export const Quiz: React.FC<QuizProps> = ({result}) => {
-    console.log(result)
   return (
     <View>
       <Text style={{fontWeight: 'bold', fontSize: 20, textAlign: 'center'}}>

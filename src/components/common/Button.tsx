@@ -7,6 +7,7 @@ interface Props {
   backgroundColor?: string;
   press?: () => void;
   style?: {}
+  disabled?: boolean
 }
 
 const secondary = '#0C0D34';
@@ -17,10 +18,13 @@ export default ({
   press,
   color = 'white',
   backgroundColor = primary,
-  style = {}
+  style = {},
+  disabled = false
+  
 }: Props) => {
   return (
     <TouchableOpacity
+    disabled = {disabled}
       style={[{
         width: 245,
         height: 50,

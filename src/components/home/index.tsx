@@ -1,12 +1,11 @@
 import React, {useContext, useEffect, useState} from 'react';
 import axios from 'axios';
-import {Quiz} from '../models';
-import {HomeStackNavProps} from './HomeParams';
-import {QuizContext} from './QuizProvider';
-import parseQuiz from '../data/quizParser';
-import {Center, Button} from './common';
-import {ActivityIndicator} from 'react-native';
-import {poll, which_character_are_you_sample} from '../data/samples';
+import {Quiz} from '../../models';
+import {HomeStackNavProps} from '../../navigation/Params';
+import {QuizContext} from '../../providers/Provider';
+import parseQuiz from '../../data/quizParser';
+import {Center, Button, Loading} from '../common';
+import {poll, which_character_are_you_sample} from '../../data/samples';
 
 export const HomeComponent: React.FC<HomeStackNavProps<'Home'>> = ({
   navigation,
@@ -32,9 +31,7 @@ export const HomeComponent: React.FC<HomeStackNavProps<'Home'>> = ({
 
   if (loading || !trueFalseQuiz) {
     return (
-      <Center>
-        <ActivityIndicator size="large" color="#2CB9B0" />
-      </Center>
+      <Loading/>
     );
   }
   
