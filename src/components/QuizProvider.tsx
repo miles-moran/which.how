@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Quiz } from "../classes";
+import { Quiz } from "../models";
 
 export const QuizContext = React.createContext<{
   submissions: number[],

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Text, TouchableOpacity} from 'react-native';
+import {TouchableOpacity} from 'react-native';
 import Icon from "react-native-vector-icons/FontAwesome";
 const secondary = '#0C0D34';
 const primary = '#2CB9B0';
@@ -9,19 +9,20 @@ interface Props {
   color?: string;
   backgroundColor?: string;
   press?: () => void;
+  style?: {}
 }
 
-export default ({text, press, backgroundColor = primary}: Props) => {
+export default ({text, press, backgroundColor = primary, style={}}: Props) => {
     return (
     <TouchableOpacity
-      style={{
+      style={[{
         width: 50,
         height: 50,
         backgroundColor,
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 25,
-      }}
+      }, style]}
       onPress={press}>
       <Icon name={text} style={{color: 'white'}} />
     </TouchableOpacity>

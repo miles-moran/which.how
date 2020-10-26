@@ -3,11 +3,12 @@ import {View} from 'react-native';
 
 type Props = {
   children: React.ReactNode
+  style?: {}
 };
 
-export default ({children}: Props) => {
+export default ({children}: Props, style={}) => {
   return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+    <View style={[{flex: 1, justifyContent: 'center', alignItems: 'center'}, style]}>
       {children}
     </View>
   );

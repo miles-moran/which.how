@@ -6,6 +6,7 @@ interface Props {
   color?: string;
   backgroundColor?: string;
   press?: () => void;
+  style?: {}
 }
 
 const secondary = '#0C0D34';
@@ -16,17 +17,18 @@ export default ({
   press,
   color = 'white',
   backgroundColor = primary,
+  style = {}
 }: Props) => {
   return (
     <TouchableOpacity
-      style={{
+      style={[{
         width: 245,
         height: 50,
         backgroundColor,
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 25,
-      }}
+      }, style]}
       onPress={press}>
       <Text style={{color}}>{text}</Text>
     </TouchableOpacity>

@@ -1,32 +1,53 @@
 import React, {useContext} from 'react';
-import {Text, View} from 'react-native';
-import {QuizStackNavProps} from './QuizParams';
-import Center from './reusables/Center';
-import Button from './reusables/Button';
+import {Text, View, StyleSheet} from 'react-native';
+import {HomeStackNavProps} from './HomeParams';
+import {Button, Center} from './common';
 import {QuizContext} from './QuizProvider';
 
-export const StartComponent: React.FC<QuizStackNavProps<'Start'>> = ({
+export const StartComponent: React.FC<HomeStackNavProps<'Start'>> = ({
   navigation,
-  route,
 }) => {
   const {quiz} = useContext(QuizContext);
   const handleStart = () => {
     navigation.navigate('Question', {});
   };
   return (
-    <View style={{flex: 1}}>
-      <View style={{flex: 0.25}}>
-        <Text style={{fontSize: 25, fontWeight: "bold", textAlign: "center"}}>{quiz?.header}</Text>
+    <Center>
+      <View style={styles.quarterFlex}>
+        <Text style={[styles.header, styles.bold]}>
+          {quiz?.title}
+        </Text>
       </View>
-      <View style={{flex: 0.25}}>
-        <Text style={{fontSize: 25, textAlign: "center"}}>{quiz?.subheader}.</Text>
+      <View style={styles.quarterFlex}>
+        <Text style={styles.header}>
+          {quiz?.subheader}
+        </Text>
       </View>
-      <View style={{flex: 0.25}}>
-        <Text style={{fontSize: 25, textAlign: "center"}}>{quiz?.footer}</Text>
+      <View style={styles.quarterFlex}>
+        <Text style={styles.header}>{quiz?.footer}</Text>
       </View>
-      <View style={{flex: 0.25, alignItems: "center", justifyContent: "center"}}>
+      <View
+        style={[styles.quarterFlex, styles.justifyCenter]}>
         <Button text={'Begin'} press={() => handleStart()}></Button>
       </View>
-    </View>
+    </Center>
   );
 };
+
+const styles = StyleSheet.create({
+  bold: {
+    fontWeight: "bold"
+  },
+  header: {
+    fontSize: 25,
+    textAlign: "center",
+    marginTop: 10,
+  },
+  quarterFlex: {
+    flex: .25
+  },
+  justifyCenter: {
+    justifyContent: "center"
+  }
+
+})
