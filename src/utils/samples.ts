@@ -3,20 +3,23 @@ import {Quiz} from '../models';
 export const which_character_are_you_sample: Quiz = {
   style: 'weighted',
   title: 'Which cartoon character are you?',
-  subheader: "You will be presented with two questions.",
-  footer: "Go!",
+  subheader: 'You will be presented with two questions.',
+  footer: 'Go!',
   outcomes: {
     'Bugs Bunny': {
       description: 'You are the carrot-loving rabbit, Bugs Bunny.',
-      image: "https://images.glaciermedia.ca/polopoly_fs/1.2019573.1438622694!/fileImage/httpImage/image.jpg_gen/derivatives/landscape_804/bugs-bunny.jpg",
+      image:
+        'https://images.glaciermedia.ca/polopoly_fs/1.2019573.1438622694!/fileImage/httpImage/image.jpg_gen/derivatives/landscape_804/bugs-bunny.jpg',
     },
     'Porky the Pig': {
       description: 'You are porky the pig',
-      image: "https://i.pinimg.com/originals/2d/a0/3f/2da03f73141ff61403cccdd3593223ec.jpg"
+      image:
+        'https://i.pinimg.com/originals/2d/a0/3f/2da03f73141ff61403cccdd3593223ec.jpg',
     },
-    "Tom": {
+    Tom: {
       description: 'You are Tom from "Tom & Jerry"',
-      image: "https://i.pinimg.com/originals/92/a6/2f/92a62f0221f58fe503a15fcb13f5c107.png",
+      image:
+        'https://i.pinimg.com/originals/92/a6/2f/92a62f0221f58fe503a15fcb13f5c107.png',
     },
   },
   questions: [
@@ -56,10 +59,9 @@ export const which_character_are_you_sample: Quiz = {
 export const poll: Quiz = {
   style: 'poll',
   title: 'Health Poll',
-  subheader: "You will be presented with two questions.",
-  footer: "Go!",
-  outcomes: {
-  },
+  subheader: 'You will be presented with two questions.',
+  footer: 'Go!',
+  outcomes: {},
   questions: [
     {
       id: 0,
@@ -97,9 +99,7 @@ export const poll: Quiz = {
           response: '11+',
           outcomeKeys: [],
         },
-
       ],
     },
-    
   ],
 };

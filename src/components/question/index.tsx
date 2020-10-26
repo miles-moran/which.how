@@ -65,8 +65,6 @@ export const QuestionComponent: React.FC<HomeStackNavProps<'Question'>> = ({
   };
 
   const handleResponse = (i: number) => {
-    console.log(index);
-    console.log(i);
     if (submissions[index] === i) {
       //if the option is already selected, unselect
       makeSubmission(index, -1);

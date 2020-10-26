@@ -1,6 +1,7 @@
 export interface Outcome {
   description?: string;
   image?: string;
+  title?: string
 };
 
 export interface Option {
@@ -36,4 +37,11 @@ export interface Result {
     question: string;
     outcomeKeys: string[];
   }[];
+  outcome: Outcome
 };
+
+//poll - a quiz in which the submission is not analyzed and is done for the sake of data entry
+
+//quiz - a quiz in which the submission is judged on a pass fail basis
+
+//weighted - a quiz in which answers add to weighted outcomes (which character are you style quiz)

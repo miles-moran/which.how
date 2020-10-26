@@ -12,7 +12,7 @@ interface Props {
 
 export default ({text, checked, press}: Props) => {
   return (
-    <TouchableOpacity style={{flexDirection: 'row'}} onPress={press}>
+    <TouchableOpacity style={{flexDirection: 'row', maxWidth: "80%"}} onPress={press}>
       <CheckBox value={checked} onChange={press} />
       <Text style={{fontSize: 20}}>{text}</Text>
     </TouchableOpacity>

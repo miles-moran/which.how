@@ -5,7 +5,7 @@ import {Button} from '../common';
 import {Poll} from './Poll';
 import {Quiz} from './Quiz';
 import {Weighted} from './Weighted';
-import generateResults from '../../data/generateResults';
+import generateResults from '../../utils/generateResults';
 export const ResultsComponent: React.FC<HomeStackNavProps<'Results'>> = ({
   navigation,
   route,
